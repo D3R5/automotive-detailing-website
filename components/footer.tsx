@@ -26,10 +26,10 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">AS</span>
+                <span className="text-primary-foreground font-bold text-lg">DN</span>
               </div>
               <span className="text-xl font-bold text-foreground">
-                AutoShine<span className="text-primary">Pro</span>
+                Dino<span className="text-primary">Gloss</span>
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
@@ -98,7 +98,7 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-muted-foreground text-sm">
-                  Av. Principal 1234, Santiago, Chile
+                  San Fernando, Chile
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -113,17 +113,17 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
                 <a
-                  href="mailto:contacto@autoshinepro.cl"
+                  href="mailto:dinogloss.detailing@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
-                  contacto@autoshinepro.cl
+                  dinogloss.detailing@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <div className="text-muted-foreground text-sm">
                   <p>Lun - Vie: 9:00 - 19:00</p>
-                  <p>Sáb: 9:00 - 14:00</p>
+                  <p>Sáb y Dom: 9:00 - 18:00</p>
                 </div>
               </li>
             </ul>
@@ -133,7 +133,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} AutoShine Pro. Todos los derechos reservados.
+            © {new Date().getFullYear()} Dino Gloss. Todos los derechos reservados.
           </p>
           <div className="flex gap-6">
             <Link

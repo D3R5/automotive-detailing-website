@@ -1,113 +1,136 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Droplets, Sparkles, Car, Shield, Sofa, Wrench, Clock, Check, MessageCircle } from "lucide-react"
+import {
+  Droplets,
+  Sparkles,
+  Car,
+  Shield,
+  Wrench,
+  Clock,
+  Check,
+  MessageCircle,
+} from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Servicios | AutoShine Pro - Detailing Automotriz Profesional",
-  description: "Descubre nuestros servicios de lavado, detailing, pulido, encerado y protección cerámica. Soluciones profesionales para todo tipo de vehículos en Chile.",
+  title: "Servicios | DINO GLOSS - Detailing Automotriz Profesional",
+  description:
+    "Servicios de detailing automotriz en Chile. Combos Básico, Avanzado y Deluxe, pulido profundo, sellado cerámico y eliminación de olores con ozono.",
 }
 
 const services = [
   {
-    id: "lavado",
+    id: "basico",
     icon: Droplets,
-    title: "Lavado Exterior e Interior",
-    description: "Limpieza profunda y meticulosa de todo tu vehículo, incluyendo carrocería, vidrios, llantas y habitáculo completo.",
-    duration: "1-2 horas",
-    features: [
-      "Lavado a mano de carrocería",
-      "Limpieza de llantas y neumáticos",
-      "Aspirado completo del interior",
-      "Limpieza de vidrios interior y exterior",
-      "Limpieza de plásticos y paneles",
-      "Aromatización del habitáculo",
-    ],
-    price: "Desde $25.000 CLP",
-  },
-  {
-    id: "detailing",
-    icon: Sparkles,
-    title: "Detailing Completo",
-    description: "Restauración integral de tu vehículo con técnicas profesionales de descontaminación, corrección y protección.",
-    duration: "4-6 horas",
-    features: [
-      "Lavado profesional con espuma",
-      "Descontaminación con clay bar",
-      "Pulido de corrección en una etapa",
-      "Encerado de protección",
-      "Acondicionamiento de plásticos",
-      "Limpieza profunda de tapicería",
-      "Tratamiento de vidrios",
-      "Limpieza del motor",
-    ],
-    price: "Desde $120.000 CLP",
-  },
-  {
-    id: "pulido",
-    icon: Car,
-    title: "Pulido y Encerado",
-    description: "Eliminamos rayones superficiales, swirl marks y oxidación para devolverle el brillo original a tu pintura.",
-    duration: "3-4 horas",
-    features: [
-      "Evaluación del estado de la pintura",
-      "Pulido de corrección profesional",
-      "Eliminación de rayones superficiales",
-      "Remoción de swirl marks",
-      "Encerado premium de protección",
-      "Brillo espejo garantizado",
-    ],
-    price: "Desde $80.000 CLP",
-  },
-  {
-    id: "ceramica",
-    icon: Shield,
-    title: "Protección Cerámica",
-    description: "Coating cerámico de última generación que protege tu pintura de rayones, químicos y rayos UV por hasta 3 años.",
-    duration: "1-2 días",
-    features: [
-      "Preparación completa de pintura",
-      "Corrección de pintura profesional",
-      "Aplicación de coating cerámico",
-      "Protección hidrofóbica extrema",
-      "Resistencia a rayones menores",
-      "Protección UV garantizada",
-      "Certificado de aplicación",
-      "Garantía de hasta 3 años",
-    ],
-    price: "Desde $350.000 CLP",
-  },
-  {
-    id: "tapiz",
-    icon: Sofa,
-    title: "Limpieza de Tapiz",
-    description: "Limpieza profunda de asientos, alfombras y tapicería con productos especializados y equipos profesionales.",
+    title: "Combo Básico",
+    description:
+      "Servicio completo de limpieza exterior e interior, ideal para mantener tu vehículo limpio y en óptimas condiciones.",
     duration: "2-3 horas",
     features: [
-      "Aspirado profundo",
-      "Limpieza de asientos de tela/cuero",
-      "Tratamiento de manchas",
-      "Limpieza de alfombras",
-      "Acondicionamiento de cuero",
-      "Eliminación de olores",
+      "Pre-lavado y lavado full exterior",
+      "Limpieza de llantas",
+      "Limpieza marcos de puertas",
+      "Limpieza de vidrios",
+      "Renovador de neumáticos",
+      "Limpieza y aspirado de interior",
+      "Limpieza de tablero con APC",
+      "Aspirado de asientos",
+      "Limpieza de maletero",
     ],
-    price: "Desde $45.000 CLP",
+    price: "S: $19.990 | M: $20.990 | L: $21.990",
   },
   {
-    id: "motor",
+    id: "avanzado",
+    icon: Sparkles,
+    title: "Combo Avanzado",
+    description:
+      "Limpieza profunda con hidratación de plásticos y lavado de tapiz para un acabado más completo y duradero.",
+    duration: "3-4 horas",
+    features: [
+      "Pre-lavado y lavado full exterior",
+      "Limpieza de llantas",
+      "Limpieza marcos de puertas",
+      "Limpieza de vidrios interior y exterior",
+      "Renovador de neumáticos",
+      "Limpieza y aspirado de interior",
+      "Limpieza de tablero con APC",
+      "Aspirado de asientos",
+      "Limpieza de maletero",
+      "Hidratación de plásticos interiores y exteriores",
+      "Lavado de tapiz con aspiradora de tapiz",
+    ],
+    price: "S: $39.990 | M: $43.990 | L: $46.990",
+  },
+  {
+    id: "deluxe",
+    icon: Shield,
+    title: "Combo Deluxe",
+    description:
+      "Servicio premium con descontaminación, pulido y encerado para un acabado profesional y protección superior.",
+    duration: "1 día",
+    features: [
+      "Pre-lavado y lavado full exterior",
+      "Limpieza de llantas",
+      "Limpieza marcos de puertas",
+      "Limpieza de vidrios interior y exterior",
+      "Renovador de neumáticos",
+      "Limpieza y aspirado de interior",
+      "Limpieza de tablero con APC",
+      "Aspirado de asientos",
+      "Limpieza de maletero",
+      "Hidratación de plásticos interiores y exteriores",
+      "Lavado de tapiz con aspiradora y taladro",
+      "Lavado de alfombras con aspiradora y taladro",
+      "Descontaminación con claybar",
+      "Pulido básico",
+      "Encerado",
+    ],
+    price: "S: $104.990 | M: $119.990 | L: $129.990",
+  },
+  {
+    id: "pulido2pasos",
+    icon: Car,
+    title: "Pulido Profundo en 2 Pasos",
+    description:
+      "Corrección avanzada de pintura con descontaminación para eliminar defectos más marcados.",
+    duration: "1-2 días",
+    features: [
+      "Descontaminación de pintura",
+      "Pulido profundo en 2 etapas",
+      "Corrección de imperfecciones",
+      "Mejora notable de brillo",
+    ],
+    price: "S: $90.000 | M: $120.000 | L: $150.000",
+  },
+  {
+    id: "pulido-ceramico",
+    icon: Shield,
+    title: "Pulido 2 Pasos + Sellador Cerámico",
+    description:
+      "Corrección profunda más protección cerámica para mayor brillo y durabilidad.",
+    duration: "2 días",
+    features: [
+      "Descontaminación de pintura",
+      "Pulido profundo en 2 etapas",
+      "Aplicación de sellador cerámico",
+      "Protección y brillo prolongado",
+    ],
+    price: "S: $150.000 | M: $190.000 | L: $230.000",
+  },
+  {
+    id: "ozono",
     icon: Wrench,
-    title: "Limpieza de Motor",
-    description: "Limpieza segura y profesional del compartimento del motor para mantenerlo en óptimas condiciones.",
+    title: "Eliminación de Olores con Ozono",
+    description:
+      "Tratamiento con máquina generadora de ozono para eliminar bacterias y olores persistentes.",
     duration: "1-2 horas",
     features: [
-      "Protección de componentes eléctricos",
-      "Desengrasado profesional",
-      "Limpieza con vapor a baja presión",
-      "Acondicionamiento de plásticos",
-      "Secado completo",
-      "Inspección visual general",
+      "Aplicación con máquina generadora de ozono",
+      "Eliminación de bacterias",
+      "Neutralización de olores fuertes",
+      "Ambiente interior más higiénico",
     ],
-    price: "Desde $35.000 CLP",
+    price: "S: $25.000 | M: $30.000 | L: $30.000",
   },
 ]
 
@@ -119,11 +142,13 @@ export default function ServiciosPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 text-balance">
-              Nuestros <span className="text-primary">Servicios</span>
+              Servicios <span className="text-primary">DINO GLOSS</span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-              Ofrecemos una gama completa de servicios de lavado y detailing automotriz, 
-              utilizando productos premium y técnicas profesionales para resultados excepcionales.
+              En DINO GLOSS nos especializamos en el cuidado estético automotriz,
+              entregando un servicio profesional, detallado y de alta calidad.
+              Trabajamos con productos especializados y técnicas seguras para
+              mantener tu vehículo limpio, protegido y con un acabado impecable.
             </p>
           </div>
         </div>
@@ -134,24 +159,27 @@ export default function ServiciosPage() {
         <div className="container mx-auto px-4">
           <div className="space-y-12 lg:space-y-16">
             {services.map((service, index) => (
-              <div
-                key={service.id}
-                id={service.id}
-                className="scroll-mt-24"
-              >
-                <div className={`flex flex-col lg:flex-row gap-8 lg:gap-12 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              <div key={service.id} id={service.id} className="scroll-mt-24">
+                <div
+                  className={`flex flex-col lg:flex-row gap-8 lg:gap-12 ${
+                    index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}
+                >
                   {/* Info Card */}
                   <div className="lg:w-1/2">
                     <div className="p-6 lg:p-8 rounded-2xl bg-card border border-border h-full">
                       <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                         <service.icon className="w-7 h-7 text-primary" />
                       </div>
+
                       <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
                         {service.title}
                       </h2>
+
                       <p className="text-muted-foreground leading-relaxed mb-6">
                         {service.description}
                       </p>
+
                       <div className="flex flex-wrap gap-4 mb-6">
                         <div className="flex items-center gap-2 text-sm text-muted-foreground">
                           <Clock className="w-4 h-4 text-primary" />
@@ -161,9 +189,12 @@ export default function ServiciosPage() {
                           {service.price}
                         </div>
                       </div>
+
                       <Button asChild>
                         <a
-                          href={`https://wa.me/56912345678?text=Hola,%20me%20interesa%20el%20servicio%20de%20${encodeURIComponent(service.title)}`}
+                          href={`https://wa.me/56912345678?text=Hola,%20me%20interesa%20el%20servicio%20de%20${encodeURIComponent(
+                            service.title
+                          )}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -182,11 +213,16 @@ export default function ServiciosPage() {
                       </h3>
                       <ul className="space-y-4">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start gap-3">
+                          <li
+                            key={featureIndex}
+                            className="flex items-start gap-3"
+                          >
                             <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center shrink-0 mt-0.5">
                               <Check className="w-3 h-3 text-accent" />
                             </div>
-                            <span className="text-muted-foreground">{feature}</span>
+                            <span className="text-muted-foreground">
+                              {feature}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -203,17 +239,24 @@ export default function ServiciosPage() {
       <section className="py-16 lg:py-24 bg-card border-t border-border">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 text-balance">
-            ¿No encuentras lo que buscas?
+            ¿Quieres agendar tu servicio?
           </h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Contáctanos para servicios personalizados o combinaciones de tratamientos especiales.
+            Contáctanos para reservar tu hora o solicitar información sobre
+            nuestros combos y servicios adicionales.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg">
               <Link href="/contacto">Solicitar cotización</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="/planes">Ver planes y precios</Link>
+              <a
+                href="https://wa.me/56912345678"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hablar por WhatsApp
+              </a>
             </Button>
           </div>
         </div>
