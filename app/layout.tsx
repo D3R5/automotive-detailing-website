@@ -13,7 +13,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "AutoShine Pro | Lavado y Detailing Automotriz Profesional en Chile",
+  title: "Dino Gloss | Lavado y Detailing Automotriz Profesional en Chile",
   description:
     "Servicio profesional de lavado, detailing y protección automotriz en Chile. Pulido, encerado, protección cerámica y más. Cotiza ahora por WhatsApp.",
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "AutoShine Pro" }],
   openGraph: {
-    title: "AutoShine Pro | Lavado y Detailing Automotriz Profesional",
+    title: "Dino Gloss | Lavado y Detailing Automotriz Profesional",
     description:
       "Protegemos, limpiamos y realzamos tu vehículo como se merece.",
     type: "website",

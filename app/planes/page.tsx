@@ -5,204 +5,189 @@ import { Check, Star, MessageCircle, ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
-  title: "Planes y Precios | AutoShine Pro - Detailing Automotriz",
-  description: "Conoce nuestros planes de lavado y detailing automotriz. Precios transparentes en CLP para servicios Básico, Premium y Full Detailing.",
+  title: "Planes y Precios | DINO GLOSS - Detailing Automotriz",
+  description:
+    "En DINO GLOSS nos especializamos en el cuidado estético automotriz, entregando un servicio profesional y de alta calidad.",
 }
 
 const plans = [
   {
     id: "basico",
-    name: "Básico",
-    description: "Ideal para mantenimiento regular de tu vehículo.",
-    price: "35.000",
-    period: "por servicio",
+    name: "Combo Básico",
+    description:
+      "Servicio ideal para mantener tu vehículo limpio y en óptimas condiciones.",
+    prices: {
+      S: "19.990",
+      M: "20.990",
+      L: "21.990",
+    },
     popular: false,
     features: [
-      "Lavado exterior a mano",
-      "Limpieza de llantas y neumáticos",
-      "Aspirado interior básico",
+      "Pre-lavado y lavado full exterior",
+      "Limpieza de llantas",
+      "Limpieza marcos de puertas",
       "Limpieza de vidrios",
-      "Aromatización",
-      "Duración: 1-2 horas",
-    ],
-    notIncluded: [
-      "Pulido de pintura",
-      "Tratamiento de cuero",
-      "Protección cerámica",
+      "Renovador de neumáticos",
+      "Limpieza y aspirado de interior",
+      "Limpieza de tablero con APC",
+      "Aspirado de asientos",
+      "Limpieza maletero",
     ],
   },
   {
-    id: "premium",
-    name: "Premium",
-    description: "Nuestra opción más popular para resultados profesionales.",
-    price: "85.000",
-    period: "por servicio",
+    id: "avanzado",
+    name: "Combo Avanzado",
+    description:
+      "Mayor nivel de detalle y tratamiento interior para un acabado superior.",
+    prices: {
+      S: "39.990",
+      M: "43.990",
+      L: "46.990",
+    },
     popular: true,
     features: [
-      "Todo lo del plan Básico",
-      "Descontaminación con clay bar",
-      "Pulido de corrección ligera",
-      "Encerado de protección",
-      "Limpieza profunda de interior",
-      "Acondicionamiento de plásticos",
-      "Tratamiento de cuero básico",
-      "Duración: 4-5 horas",
-    ],
-    notIncluded: [
-      "Protección cerámica",
+      "Todo lo del Combo Básico",
+      "Vidrios interior y exterior",
+      "Hidratación de plásticos interiores y exteriores",
+      "Lavado de tapiz con aspiradora de tapiz",
+      "Aspirado profundo de maletero",
     ],
   },
   {
-    id: "full",
-    name: "Full Detailing",
-    description: "La experiencia completa para tu vehículo.",
-    price: "180.000",
-    period: "por servicio",
+    id: "deluxe",
+    name: "Combo Deluxe",
+    description:
+      "Experiencia completa de detailing con descontaminación y protección.",
+    prices: {
+      S: "104.990",
+      M: "119.990",
+      L: "129.990",
+    },
     popular: false,
     features: [
-      "Todo lo del plan Premium",
-      "Pulido de corrección completa",
-      "Protección cerámica 6 meses",
-      "Tratamiento de cuero premium",
-      "Limpieza de motor",
-      "Tratamiento hidrofóbico vidrios",
-      "Certificado de servicio",
-      "Duración: 1-2 días",
+      "Todo lo del Combo Avanzado",
+      "Lavado alfombra con aspiradora y taladro",
+      "Descontaminación con claybar",
+      "Pulido básico",
+      "Encerado",
     ],
-    notIncluded: [],
   },
 ]
 
-const addons = [
-  { name: "Limpieza de motor", price: "35.000" },
-  { name: "Tratamiento de cuero premium", price: "25.000" },
-  { name: "Upgrade a cerámica 1 año", price: "120.000" },
-  { name: "Upgrade a cerámica 3 años", price: "250.000" },
-  { name: "Tratamiento antiolor", price: "20.000" },
-  { name: "Restauración de faros", price: "30.000" },
+const extras = [
+  {
+    name: "Pulido profundo en 2 pasos",
+    prices: { S: "90.000", M: "120.000", L: "150.000" },
+  },
+  {
+    name: "Pulido profundo + Sellador cerámico",
+    prices: { S: "150.000", M: "190.000", L: "230.000" },
+  },
+  {
+    name: "Eliminación de olores con ozono",
+    prices: { S: "25.000", M: "30.000", L: "30.000" },
+  },
 ]
 
 export default function PlanesPage() {
   return (
     <div className="pt-20">
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="py-16 lg:py-24 bg-card border-b border-border">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 text-balance">
-              Planes y <span className="text-primary">Precios</span>
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-              Elige el plan que mejor se adapte a las necesidades de tu vehículo. 
-              Todos nuestros servicios incluyen productos premium y garantía de satisfacción.
-            </p>
-          </div>
+        <div className="container mx-auto px-4 text-center max-w-3xl">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+            Planes y <span className="text-primary">Precios</span>
+          </h1>
+          <p className="text-muted-foreground text-lg">
+            En DINO GLOSS nos especializamos en el cuidado estético automotriz,
+            entregando un servicio profesional, detallado y de alta calidad.
+          </p>
         </div>
       </section>
 
-      {/* Pricing Cards */}
+      {/* Planes */}
       <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-            {plans.map((plan) => (
-              <div
-                key={plan.id}
-                className={cn(
-                  "relative flex flex-col rounded-2xl border p-6 lg:p-8",
-                  plan.popular
-                    ? "bg-primary/5 border-primary"
-                    : "bg-card border-border"
-                )}
-              >
-                {/* Popular Badge */}
-                {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold">
-                      <Star className="w-3 h-3 fill-current" />
-                      Más Popular
-                    </div>
-                  </div>
-                )}
-
-                {/* Header */}
-                <div className="mb-6">
-                  <h3 className="text-xl font-bold text-foreground mb-2">
-                    {plan.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {plan.description}
-                  </p>
+        <div className="container mx-auto px-4 grid md:grid-cols-3 gap-8 max-w-6xl">
+          {plans.map((plan) => (
+            <div
+              key={plan.id}
+              className={cn(
+                "rounded-2xl border p-8 flex flex-col",
+                plan.popular
+                  ? "bg-primary/5 border-primary"
+                  : "bg-card border-border"
+              )}
+            >
+              {plan.popular && (
+                <div className="mb-4 text-xs font-semibold text-primary">
+                  ⭐ Más Popular
                 </div>
+              )}
 
-                {/* Price */}
-                <div className="mb-6">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-bold text-foreground">
-                      ${plan.price}
-                    </span>
-                    <span className="text-muted-foreground">CLP</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {plan.period}
-                  </p>
-                </div>
+              <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
+              <p className="text-sm text-muted-foreground mb-6">
+                {plan.description}
+              </p>
 
-                {/* CTA Button */}
-                <Button
-                  asChild
-                  className={cn(
-                    "w-full mb-6",
-                    plan.popular ? "" : "bg-secondary text-foreground hover:bg-secondary/80"
-                  )}
-                  variant={plan.popular ? "default" : "secondary"}
-                >
-                  <a
-                    href={`https://wa.me/56912345678?text=Hola,%20me%20interesa%20el%20plan%20${encodeURIComponent(plan.name)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+              {/* Precios por tamaño */}
+              <div className="mb-6 space-y-2">
+                {Object.entries(plan.prices).map(([size, price]) => (
+                  <div
+                    key={size}
+                    className="flex justify-between text-sm border-b pb-1"
                   >
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    Reservar
-                  </a>
-                </Button>
+                    <span>Tamaño {size}</span>
+                    <span className="font-semibold">${price} CLP</span>
+                  </div>
+                ))}
+              </div>
 
-                {/* Features */}
-                <div className="flex-grow">
-                  <p className="text-sm font-semibold text-foreground mb-4">
-                    Incluye:
-                  </p>
-                  <ul className="space-y-3">
-                    {plan.features.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center shrink-0 mt-0.5">
-                          <Check className="w-3 h-3 text-accent" />
-                        </div>
-                        <span className="text-sm text-muted-foreground">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+              <Button asChild className="mb-6">
+                <a
+                  href={`https://wa.me/56912345678?text=Hola,%20me%20interesa%20el%20${encodeURIComponent(
+                    plan.name
+                  )}`}
+                  target="_blank"
+                >
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  Reservar
+                </a>
+              </Button>
 
-                  {plan.notIncluded.length > 0 && (
-                    <>
-                      <p className="text-sm font-semibold text-foreground mt-6 mb-4">
-                        No incluye:
-                      </p>
-                      <ul className="space-y-3">
-                        {plan.notIncluded.map((feature, index) => (
-                          <li key={index} className="flex items-start gap-3">
-                            <div className="w-5 h-5 rounded-full bg-muted flex items-center justify-center shrink-0 mt-0.5">
-                              <span className="w-2 h-0.5 bg-muted-foreground" />
-                            </div>
-                            <span className="text-sm text-muted-foreground/70">
-                              {feature}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
+              <ul className="space-y-3">
+                {plan.features.map((feature, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm">
+                    <Check className="w-4 h-4 text-primary mt-1" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Extras */}
+      <section className="py-16 bg-card border-t border-border">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-2xl font-bold text-center mb-10">
+            Servicios Extra
+          </h2>
+
+          <div className="space-y-6">
+            {extras.map((extra, index) => (
+              <div
+                key={index}
+                className="border rounded-xl p-6 bg-secondary/40"
+              >
+                <h3 className="font-semibold mb-4">{extra.name}</h3>
+                <div className="grid sm:grid-cols-3 gap-4 text-sm">
+                  {Object.entries(extra.prices).map(([size, price]) => (
+                    <div key={size} className="flex justify-between">
+                      <span>Tamaño {size}</span>
+                      <span className="font-semibold">${price} CLP</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
@@ -210,64 +195,23 @@ export default function PlanesPage() {
         </div>
       </section>
 
-      {/* Add-ons */}
-      <section className="py-16 lg:py-24 bg-card border-t border-border">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
-                Servicios Adicionales
-              </h2>
-              <p className="text-2xl sm:text-3xl font-bold text-foreground text-balance">
-                Personaliza tu servicio
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {addons.map((addon, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-between p-4 rounded-xl bg-secondary/50 border border-border"
-                >
-                  <span className="text-foreground">{addon.name}</span>
-                  <span className="text-primary font-semibold">
-                    ${addon.price} CLP
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ CTA */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 text-balance">
-            ¿Tienes dudas sobre qué plan elegir?
-          </h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Contáctanos y te ayudaremos a encontrar la mejor opción para tu vehículo y presupuesto.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg">
-              <a
-                href="https://wa.me/56912345678?text=Hola,%20necesito%20ayuda%20para%20elegir%20un%20plan"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Consultar por WhatsApp
-              </a>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href="/contacto">
-                Enviar mensaje
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
-          </div>
-        </div>
+      {/* CTA */}
+      <section className="py-16 text-center">
+        <h2 className="text-2xl font-bold mb-4">
+          ¿No sabes qué combo elegir?
+        </h2>
+        <p className="text-muted-foreground mb-8">
+          Escríbenos y te ayudamos a elegir la mejor opción para tu vehículo.
+        </p>
+        <Button asChild size="lg">
+          <a
+            href="https://wa.me/56912345678?text=Hola,%20necesito%20asesoría"
+            target="_blank"
+          >
+            <MessageCircle className="w-5 h-5 mr-2" />
+            Consultar por WhatsApp
+          </a>
+        </Button>
       </section>
     </div>
   )

@@ -41,10 +41,10 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">NS</span>
+              <span className="text-primary-foreground font-bold text-lg">DN</span>
             </div>
             <span className="text-xl font-bold text-foreground hidden sm:block">
-              Nitro<span className="text-primary">Gloss</span>
+              Dino<span className="text-primary">Gloss</span>
             </span>
           </Link>
 
